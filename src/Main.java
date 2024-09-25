@@ -31,5 +31,21 @@ public class Main {
         System.out.println("Is empty: " + queueue.isEmpty());
 
         System.out.println("¯\\_(ツ)_/¯");
+        StackArray<Integer> stack = new StackArray<>(5);
+
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.display();
+
+        System.out.println("Top item: " + stack.peek());
+        System.out.println("Popped: " + stack.pop());
+        stack.display();
+
+        System.out.println("Size: " + stack.size());
+        System.out.println("Is empty: " + stack.isEmpty());
+
+        System.out.println("¯\\_(ツ)_/¯");
     }
 }
