@@ -1,5 +1,54 @@
 
-public class QueueLL {
+public class QueueLL<E> {
+    private Node<E> front, back;
+    private int count;
+
+    static class Node<E> {
+        E data;
+        Node<E> next;
+
+        Node(E data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    public QueueLL() {
+        front = null;
+        back = null;
+        count = 0;
+    }
+
+    public void enqueue(E item) {
+        Node<E> newNode = new Node<>(item);
+        if (isEmpty()) front = newNode;
+        else back.next = newNode;
+        back = newNode;
+        count++;
+    }
+
+    public E dequeue() {
+        if (isEmpty()) throw new IllegalStateException("Queue is empty");
+        E item = front.data;
+        front = front.next;
+        count--;
+        if (isEmpty()) back = null;
+        return item;
+    }
+
+    public E peek() {
+        if (isEmpty()) throw new IllegalStateException("Queue is empty");
+        return front.data;
+    }
+
+    public void display() {
+        Node<E> current = front;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
 }
 
 
