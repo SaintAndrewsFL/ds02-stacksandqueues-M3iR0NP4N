@@ -1,5 +1,58 @@
-public class StackLL {
+public class StackLL<E> {
+    private Node<E> top;
+    private int count;
 
+    private static class Node<E> {
+        E data;
+        Node<E> next;
+
+        Node(E data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    public StackLL() {
+        top = null;
+        count = 0;
+    }
+
+    public void push(E item) {
+        Node<E> newNode = new Node<>(item);
+        newNode.next = top;
+        top = newNode;
+        count++;
+    }
+
+    public E pop() {
+        if (isEmpty()) throw new IllegalStateException("Stack is empty");
+        E item = top.data;
+        top = top.next;
+        count--;
+        return item;
+    }
+
+    public E peek() {
+        if (isEmpty()) throw new IllegalStateException("Stack is empty");
+        return top.data;
+    }
+
+    public void display() {
+        Node<E> current = top;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
+    public int size() {
+        return count;
+    }
+
+    public boolean isEmpty() {
+        return count == 0;
+    }
 }
 
 

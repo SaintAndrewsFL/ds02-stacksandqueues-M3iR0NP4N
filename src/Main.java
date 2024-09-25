@@ -47,5 +47,19 @@ public class Main {
         System.out.println("Is empty: " + stack.isEmpty());
 
         System.out.println("¯\\_(ツ)_/¯");
+        StackLL<Integer> stackack = new StackLL<>();
+
+        stackack.push(1);
+        stackack.push(2);
+        stackack.push(3);
+        stackack.push(4);
+        stackack.display();
+
+        System.out.println("Top item: " + stackack.peek());
+        System.out.println("Popped: " + stackack.pop());
+        stackack.display();
+
+        System.out.println("Size: " + stackack.size());
+        System.out.println("Is empty: " + stackack.isEmpty());
     }
 }

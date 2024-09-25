@@ -26,7 +26,7 @@ public class StackArray<E> {
     }
 
     public void display() {
-        for (int i = top; i >= 0; i--) System.out.println(stack[i] + " ");
+        for (int i = top; i >= 0; i--) System.out.print(stack[i] + " ");
         System.out.println();
     }
 
