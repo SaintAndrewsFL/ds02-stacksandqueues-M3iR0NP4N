@@ -49,6 +49,14 @@ public class QueueLL<E> {
         }
         System.out.println();
     }
+
+    public int size() {
+        return count;
+    }
+
+    public boolean isEmpty() {
+        return count == 0;
+    }
 }
 
 
