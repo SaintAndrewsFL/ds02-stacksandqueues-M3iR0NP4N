@@ -2,7 +2,18 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("¯\\_(ツ)_/¯");
         QueueArray<Integer> queue = new QueueArray<>(5);
+        QueueLL<Integer> myQueueLL = new QueueLL<>();
+        StackArray<Integer> stackArray = new StackArray<>(5);
+        StackLL<Integer> stackLL = new StackLL<>();
 
+       for(int i = 0; i < 5; i++) {
+           stackLL.push(i);
+       }
+
+       System.out.println();
+       stackLL.display();
+
+        /*
         queue.enqueue(1);
         queue.enqueue(2);
         queue.enqueue(3);
@@ -61,5 +72,7 @@ public class Main {
 
         System.out.println("Size: " + stackack.size());
         System.out.println("Is empty: " + stackack.isEmpty());
+
+         */
     }
 }

@@ -28,7 +28,7 @@ public class QueueLL<E> {
     }
 
     public E dequeue() {
-        if (isEmpty()) throw new IllegalStateException("Queue is empty");
+        if (isEmpty()) return null;
         E item = front.data;
         front = front.next;
         count--;
@@ -37,7 +37,7 @@ public class QueueLL<E> {
     }
 
     public E peek() {
-        if (isEmpty()) throw new IllegalStateException("Queue is empty");
+        if (isEmpty()) return null;
         return front.data;
     }
 

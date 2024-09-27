@@ -25,7 +25,7 @@ public class StackLL<E> {
     }
 
     public E pop() {
-        if (isEmpty()) throw new IllegalStateException("Stack is empty");
+        if (isEmpty()) return null;
         E item = top.data;
         top = top.next;
         count--;
@@ -33,7 +33,7 @@ public class StackLL<E> {
     }
 
     public E peek() {
-        if (isEmpty()) throw new IllegalStateException("Stack is empty");
+        if (isEmpty()) return null;
         return top.data;
     }
 

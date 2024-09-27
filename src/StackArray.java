@@ -11,17 +11,17 @@ public class StackArray<E> {
     }
 
     public void push(E item) {
-        if (top == capacity - 1) throw new IllegalStateException("Stack is full");
+        if (top == capacity - 1) return;
         stack[++top] = item;
     }
 
     public E pop() {
-        if (isEmpty()) throw new IllegalStateException("Stack is empty");
+        if (isEmpty()) return null;
         return stack[top--];
     }
 
     public E peek() {
-        if (isEmpty()) throw new IllegalStateException("Stack is empty");
+        if (isEmpty()) return null;
         return stack[top];
     }
 

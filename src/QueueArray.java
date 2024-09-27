@@ -18,7 +18,7 @@ public class QueueArray<E> {
     }
 
     public E dequeue() {
-        if (isEmpty())  throw new IllegalStateException("Queue is empty");
+        if (isEmpty()) return null;
         E item = q[front];
         front = (front + 1) % capacity;
         count--;
@@ -26,7 +26,7 @@ public class QueueArray<E> {
     }
 
     public E peek() {
-        if (isEmpty()) throw new IllegalStateException("Queue is empty");
+        if (isEmpty()) return null;
         return q[front];
     }
 
